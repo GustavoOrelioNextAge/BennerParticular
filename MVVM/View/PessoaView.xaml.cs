@@ -89,5 +89,15 @@ namespace WpfApp3.MVVM.View
                 throw new Exception("Erro" + ex);
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DatagridPessoas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

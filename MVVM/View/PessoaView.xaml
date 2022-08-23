@@ -8,7 +8,7 @@
              xmlns:viewModel="clr-namespace:WpfApp3.MVVM.ViewModel"
              mc:Ignorable="d" Height="565" Width="799">
 
-    <StackPanel Margin="20">
+    <StackPanel Margin="20,20,10,20">
         <Grid Margin="0,0,10,0" RenderTransformOrigin="0.477,0.501">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="349*"/>
@@ -43,7 +43,7 @@
 
                 <Grid>
                     <Label Content="Pesquisar" Margin="0,-8,10,-4"/>
-                    <TextBox Text="{Binding PesquisaText}" Name="pesquisar" Height="24" Margin="0,17,84,6"/>
+                    <TextBox Text="{Binding PesquisaText}" Name="pesquisar" Margin="0,17,84,6"/>
                     <Button Content="Pesquisar" Margin="210,17,25,6" Height="24" CommandParameter="{Binding}" Command="{Binding Pesquisa}" Cursor="Hand"/>
                 </Grid>
             </StackPanel>
@@ -56,10 +56,10 @@
                       AutoGenerateColumns="False"
                       IsReadOnly="True"
                           Height="136"
-                          Width="390"
+                          Width="391"
                       Name="datagridPessoas"
                       SelectedItem="{Binding PessoasSelecionado}"
-                          SelectionMode="Single" >
+                          SelectionMode="Single" SelectionChanged="DatagridPessoas_SelectionChanged" RenderTransformOrigin="0.494,0.522" >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                         <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
